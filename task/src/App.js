@@ -44,12 +44,12 @@ const App = () => {
   };
 
   const handleDeleteWorker = (workerId) => {
-    // const newWorkers = [...workers];
-    // const index = workers.findIndex((worker) => worker.id === workerId);
-    //
-    // newWorkers.splice(index, 1);
-    //
-    // setWorkers(newWorkers);
+    const newWorkers = [...workers];
+    const index = workers.findIndex((worker) => worker.id === workerId);
+
+    newWorkers.splice(index, 1);
+
+    setWorkers(newWorkers);
   }
 
 // -------------------------------------------------
