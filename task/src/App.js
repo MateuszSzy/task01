@@ -10,7 +10,6 @@ const App = () => {
     lastName: '',
     department: '',
     salary: '',
-    summary: '',
   });
 
   const handleAddFormChange = (event) => {
