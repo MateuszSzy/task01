@@ -54,23 +54,14 @@ const App = () => {
 // -------------------------------------------------
 // summary salary
   const wor = [...workers];
-  const sumSalary = wor.map(item => {
-    const container = {};
+  const sumSalary = wor.map((item) => {
 
-    container[item.salary] = item.salary;
+    return parseFloat(item.salary)
 
   });
+  const summary = sumSalary.reduce((a, b) => a + b)
 
-  function amount(item){
-    return item.salary;
-  }
-
-  function sum(prev, next) {
-    return prev + next;
-  }
-
-  const sums = wor.map(amount).reduce(sum);
-  console.log(sums)
+  console.log(sumSalary);
 // ----------------------------------------------------
 
   const [search, setSearch] = useState("");
@@ -115,7 +106,7 @@ const App = () => {
                 </div>
             )
           })}
-          <p id="sum">Summary {sums} USD</p>
+          <p id="sum">Summary {summary} USD</p>
           </tbody>
         </table>
         <h2>Add new worker</h2>
